@@ -100,61 +100,25 @@ ZPentaSuite is a comprehensive penetration testing framework written in Go, cons
 1. Clone & Enter Directory
 
 ```bash
-git clone https://github.com/yourusername/ZPentaSuite.git
-cd ZPentaSuite
+git clone https://github.com/GoldenZhedder409/ZPentaSuite.git
 ```
 
 2. Initialize Go Modules
 
 ```bash
-# Initialize root module (optional)
-go mod init zpentasuite
+# Initialize root module 
+go mod init ZPentaSuite
 go mod tidy
-
-# Initialize each tool (if you want to build individually)
-cd Zburpsuite && go mod init && go mod tidy && cd ..
-cd Zhydra && go mod init && go mod tidy && cd ..
-cd Zjohn_the_ripper && go mod init && go mod tidy && cd ..
-cd ZMaltego && go mod init && go mod tidy && cd ..
-cd Znmap && go mod init && go mod tidy && cd ..
-cd Zsqlmap && go mod init && go mod tidy && cd ..
 ```
 
 3. Build All Tools
 
 ```bash
-# Build everything from root
-go build -o bin/zburbsuite Zburpsuite/*.go
-go build -o bin/zhydra Zhydra/*.go
-go build -o bin/zjohn Zjohn_the_ripper/*.go
-go build -o bin/zmaltego ZMaltego/*.go
-go build -o bin/znmap Znmap/*.go
-go build -o bin/zsqlmap Zsqlmap/*.go
-
-# Or build individually
-cd Zburpsuite && go build -o zburpsuite && cd ..
-```
-
-4. Run Tools
-
-```bash
-# ZBurpSuite
-./Zburpsuite/zburpsuite -u https://target.com --scan all
-
-# ZHydra
-./Zhydra/zhydra -u https://target.com --smart-brute
-
-# ZJohnTheRipper
-./Zjohn_the_ripper/zjohn --load hashes.txt --wordlist wordlist.txt
-
-# ZMaltego (requires config.json with API keys)
-./ZMaltego/zmaltego -d target.com --recon all
-
-# ZNmap
-./Znmap/znmap -t 192.168.1.1 --scan quick
-
-# ZSQLmap
-./Zsqlmap/zsqlmap -u "http://target.com/page?id=1" --sqlmap
+#build individually
+cd Zburpsuite && go build -o ZBurpSuite
+etc..
+#or run
+cd Zburpsuite && go run ZBurpSuite
 ```
 
 ---

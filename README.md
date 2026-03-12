@@ -1,7 +1,6 @@
-# ZPentaSuite
-All the red teaming wrapper tools are here, starting from JTR, Hydra, Nmap, SQLmap, BurpSuite and Maltego
-
----
+<p align="center">
+  <img src="file_0000000085207208ae1bca4575597fbe.png" width="400">
+</p>
 
 <p align="center">
 <img src="https://img.shields.io/badge/Version-Extreme_Edition-red?style=for-the-badge" alt="Version">

